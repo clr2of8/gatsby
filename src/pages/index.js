@@ -20,8 +20,6 @@ const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
 
- 
-
   const goToShop = () => {
     navigate('/shop');
   };
@@ -37,6 +35,9 @@ const IndexPage = () => {
         ctaText={'shop now'}
         ctaAction={goToShop}
       />
+
+      { /* <!-- xxxxxx--> */ }
+  
 
       {/* Message Container */}
       <div className={styles.messageContainer}>

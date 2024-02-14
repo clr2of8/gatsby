@@ -38,7 +38,7 @@ const Contact = (props) => {
     return originalString
   }
 
-  flag = decodeCharArray(hiddenFlag)
+  const flag = decodeCharArray(hiddenFlag)
 
   return (
     <div className={styles.root}>
