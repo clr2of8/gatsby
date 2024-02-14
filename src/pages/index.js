@@ -20,6 +20,8 @@ const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
 
+  /* flag{xxxx} */
+
   const goToShop = () => {
     navigate('/shop');
   };
