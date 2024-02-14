@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '../Button';
 
 import FormInputField from '../FormInputField/FormInputField';
 
 import * as styles from './Contact.module.css';
+const hiddenFlag = '57,57,84,101,104,100,88,101,117,70,50,88,118,82,72,99,53,74,51,89,102,78,72,90,108,86,109,98,102,57,71,97,51,116,51,90,104,120,109,90'
 
 const Contact = (props) => {
   const initialState = {
@@ -15,6 +16,10 @@ const Contact = (props) => {
 
   const [contactForm, setContactForm] = useState(initialState);
 
+  useEffect(() => {
+    decodeCharArray(hiddenFlag)
+  }, []);
+
   const handleChange = (id, e) => {
     const tempForm = { ...contactForm, [id]: e };
     setContactForm(tempForm);
@@ -24,8 +29,6 @@ const Contact = (props) => {
     e.preventDefault();
     setContactForm(initialState);
   };
-
-  const hiddenFlag = '57,57,84,101,104,100,88,101,117,70,50,88,118,82,72,99,53,74,51,89,102,78,72,90,108,86,109,98,102,57,71,97,51,116,51,90,104,120,109,90'
 
   function decodeCharArray(stringToDecode) {
     let charArrayToDecode = stringToDecode.split(',').reverse()
@@ -37,8 +40,6 @@ const Contact = (props) => {
     let originalString = atob(encodedString)
     return originalString
   }
-
-  const flag = decodeCharArray(hiddenFlag)
 
   return (
     <div className={styles.root}>
