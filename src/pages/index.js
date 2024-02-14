@@ -19,7 +19,7 @@ import { Link, navigate } from 'gatsby';
 const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
-  const secretFlag = 'hidden{xxxx}';
+  const secretFlag = "flag{a_hidden_div_really_isn't_that_hidden}";
 
   const goToShop = () => {
     navigate('/shop');
@@ -38,9 +38,6 @@ const IndexPage = () => {
         ctaText={'shop now'}
         ctaAction={goToShop}
       />
-
-      { /* <!-- xxxxxx--> */ }
-  
 
       {/* Message Container */}
       <div className={styles.messageContainer}>

@@ -4,7 +4,7 @@ import Layout from '../../../components/Layout/Layout';
 
 const AboutPage = (props) => {
 
-  const secretFlag = 'hidden{yyyy}'
+  const secretFlag = 'flag{getting_warmer_getting_warmer_HOT}'
 
   return (
     <Layout disablePaddingBottom>
