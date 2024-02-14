@@ -19,6 +19,7 @@ import { Link, navigate } from 'gatsby';
 const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
+  const secretFlag = 'flag{xxxx}';
 
   const goToShop = () => {
     navigate('/shop');
@@ -26,6 +27,8 @@ const IndexPage = () => {
 
   return (
     <Layout disablePaddingBottom>
+      <div style={{display: 'none'}}>{secretFlag}</div>
+
       {/* Hero Container */}
       <Hero
         maxWidth={'500px'}
