@@ -19,8 +19,8 @@ import { Link, navigate } from 'gatsby';
 const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
-
-  /* flag{xxxx} */
+  const flagString = 'flag{xxxx}'
+ 
 
   const goToShop = () => {
     navigate('/shop');
@@ -37,6 +37,8 @@ const IndexPage = () => {
         ctaText={'shop now'}
         ctaAction={goToShop}
       />
+
+      <div style="display:none;">{flagString}</div>
 
       {/* Message Container */}
       <div className={styles.messageContainer}>
